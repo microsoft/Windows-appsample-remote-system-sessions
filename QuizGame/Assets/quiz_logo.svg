@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.1 112.1">
+  <title>quiz_logo</title>
+  <g id="question_mark" data-name="question mark">
+    <g id="question-mark">
+      <path d="M10.6,85H5V82.2C5,71.9,8.7,68.1,18.7,68.1H73c14,0,21.4-8.6,21.4-17.2a13.9,13.9,0,0,0-4.9-10.6c-3.8-3.3-9.5-5-16.5-5H13c-6.4,0-7.4.5-7.4,8.6v2.8H0V43.9c0-9.7,1.9-14.3,13-14.3H73c8.3,0,15.3,2.2,20.2,6.4a19.5,19.5,0,0,1,6.9,14.9c0,11.1-9.5,22.8-27,22.8H18.7c-6.4,0-8.1.8-8.1,8.5Z" fill="#fff"/>
+      <rect x="4.5" y="96.8" width="5.7" height="15.28" fill="#fff"/>
+    </g>
+  </g>
+  <g id="logo-crown">
+    <g id="logo-crown-2" data-name="logo-crown">
+      <polygon points="31.1 0 31.1 12 45 12 40.3 8 31.1 0" fill="#999"/>
+      <polygon points="55.1 12 69.1 12 69.1 0 62 6 55.1 12" fill="#ccc"/>
+      <polygon points="40.5 8.2 45 12 50.1 12 50.1 0 40.5 8.2" fill="#ccc"/>
+      <polygon points="59.3 8.4 50.1 0 50.1 12 55.1 12 59.3 8.4" fill="#fff"/>
+    </g>
+  </g>
+</svg>

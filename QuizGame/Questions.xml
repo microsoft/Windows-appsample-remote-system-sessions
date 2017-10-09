@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Questions>
+  <Question Text="In which year was Microsoft founded?">
+    <Options>
+      <Option Text="1971"/>
+      <Option Text="1973"/>
+      <Option Text="1975" IsCorrectAnswer="True"/>
+      <Option Text="1977"/>
+    </Options>
+  </Question>
+  <Question Text="What was the Microsoft slogan in 2005?">
+    <Options>
+      <Option Text="A computer on every desktop."/>
+      <Option Text="Where do you want to go today?" IsCorrectAnswer="True"/>
+      <Option Text="Your potential. Our passion."/>
+      <Option Text="Be what's next."/>
+    </Options>
+  </Question>
+  <Question Text="Including Clippy, how many office Assistants were in Office 97?">
+    <Options>
+      <Option Text="5"/>
+      <Option Text="7"/>
+      <Option Text="9" IsCorrectAnswer="True"/>
+      <Option Text="Wait, there was more than one?"/>
+    </Options>
+  </Question>
+  <Question Text="The dog Rover, in what 1995 Microsoft product, could be considered a precursor to Cortana?">
+    <Options>
+      <Option Text="Microsoft Encarta"/>
+      <Option Text="Microsoft Bob" IsCorrectAnswer="True"/>
+      <Option Text="Microsoft Live One Care"/>
+      <Option Text="Microsoft Live Mesh"/>
+    </Options>
+  </Question>
+</Questions>

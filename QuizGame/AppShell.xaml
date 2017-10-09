@@ -1,0 +1,87 @@
+﻿<!--  
+//  Copyright (c) Microsoft Corporation.  All rights reserved.
+// 
+//  The MIT License (MIT)
+// 
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+// 
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+// 
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE. 
+-->
+
+<Page x:Class="QuizGame.AppShell"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:QuizGame"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+    <Page.Resources />
+    <Grid Background="{StaticResource GradientBackground}">
+        <SplitView x:Name="DebugSplitView"
+                   DisplayMode="Inline"
+                   IsPaneOpen="False"
+                   PanePlacement="Right">
+            <SplitView.Content>
+                <Grid>
+                    <Frame x:Name="frame" />
+                    <ToggleButton x:Name="ToggleDebugButton"
+                                  Width="50"
+                                  Height="50"
+                                  HorizontalAlignment="Left"
+                                  VerticalAlignment="Bottom"
+                                  Background="Transparent"
+                                  BorderBrush="Transparent"
+                                  Canvas.ZIndex="100"
+                                  IsChecked="{Binding IsPaneOpen, ElementName=DebugSplitView, Mode=TwoWay}">
+                        <ToggleButton.Content>
+                            <SymbolIcon Foreground="White"
+                                        Symbol="Setting" />
+                        </ToggleButton.Content>
+                    </ToggleButton>
+                </Grid>
+            </SplitView.Content>
+            <SplitView.Pane>
+                <Grid Padding="{StaticResource TitleBarOffsetPadding}"
+                      Background="Black">
+                    <ScrollViewer HorizontalScrollBarVisibility="Visible"
+                                  HorizontalScrollMode="Enabled">
+                        <ItemsControl Margin="10,10,10,10"
+                                      ItemsSource="{x:Bind Logs, Mode=OneWay}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="local:Log">
+                                    <TextBlock Foreground="White"
+                                               Text="{x:Bind DisplayMessage, Mode=OneWay}"
+                                               TextWrapping="WrapWholeWords" />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </SplitView.Pane>
+        </SplitView>
+        <Grid Height="{StaticResource TitleBarHeight}"
+              Padding="{x:Bind BackButtonOffsetPadding, Mode=OneWay}"
+              VerticalAlignment="Top"
+              Background="#33000000">
+            <TextBlock VerticalAlignment="Center"
+                       Foreground="{x:Bind TitleBarForegroundColor, Mode=OneWay}"
+                       Style="{StaticResource CaptionTextBlockStyle}"
+                       Text="Quiz" />
+        </Grid>
+
+    </Grid>
+</Page>

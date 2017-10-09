@@ -1,0 +1,69 @@
+﻿//  ---------------------------------------------------------------------------------
+//  Copyright (c) Microsoft Corporation.  All rights reserved.
+// 
+//  The MIT License (MIT)
+// 
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+// 
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+// 
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+//  ---------------------------------------------------------------------------------
+
+using QuizGame.Controls;
+using QuizGame.ViewModels;
+using Windows.System.RemoteSystems;
+using Windows.UI.Core;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
+
+namespace QuizGame.Views
+{
+    public sealed partial class GameView : Page
+    {
+        public GameView() => InitializeComponent();
+
+        public GameViewModel ViewModel { get; set; }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            ViewModel = e.Parameter as GameViewModel;
+            ViewModel.QuestionChanged += ViewModel_QuestionChanged;
+            ViewModel.ScoreboardChanged += ViewModel_ScoreboardChanged;
+            App.SessionManager.SessionDisconnected += SessionManager_SessionDisconnected;
+            AppShell.Instance.ContentFrame.BackStack.Clear();
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            //DataContext = ViewModel; 
+        }
+
+        private void SessionManager_SessionDisconnected(object sender, RemoteSystemSessionDisconnectedEventArgs e) => 
+            AppShell.Instance.ContentFrame.Navigate(typeof(WelcomeView));
+
+        private void ViewModel_QuestionChanged(object sender, QuestionChangedEventArgs e)
+        {
+            QuestionControl.ShowOptions = false; 
+            QuestionControl.Question = e.NewQuestion;
+            ViewModel.CountdownTimerTick = 26;
+        }
+
+        private void ViewModel_ScoreboardChanged(object sender, ScoreboardChangedEventArgs e) => 
+            Scores.Scorecards = e.NewScores;
+
+        private void QuestionControl_OptionSelected(object s, OptionSelectedEventArgs e) => 
+            ViewModel.OptionSelected(e.SelectedOption); 
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e) => ViewModel.Cleanup();
+    }
+}
