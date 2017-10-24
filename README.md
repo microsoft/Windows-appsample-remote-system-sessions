@@ -13,8 +13,13 @@ When running the sample, you are presented with an option to create a new game a
 > Note - For more information on the Project Rome platform, including the Remote System Session API, see [Connected apps and devices](https://docs.microsoft.com/windows/uwp/launch-resume/connected-apps-and-devices).
 
 ## Running the sample
-- To run the sample, you will need to be on the Insiders Fast builds for device operating systems, and have build 16299 or higher. You'll need to have at least two Windows 10 devices to test out this app scenario.
-- You will need SDK version 16299 or higher.
+
+This sample requires Visual Studio 2017 (version 15.4), and **you'll need to have at least two Windows 10 devices on the Windows 10 Fall Creators Update (16299) to test out this app scenario.** 
+Once registered, you can use the following links to retrieve the appropriate installers.
+- Get a copy of [Visual Studio 2017](https://www.visualstudio.com/) (version 15.4)
+- Get the [Windows 10 Fall Creators Update](https://support.microsoft.com/help/4028685/windows-10-get-the-fall-creators-update) (16299)
+- Get the latest [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) (16299)
+
 - Configure the following settings:
     1. Bluetooth must be enabled, this can be enabled by going to **Settings | Bluetooth & other devices** and turning on Bluetooth.
     2. Share across devices must also be enabled, you'll need to access **Change shared experience settings**. The feature  **Share across devices** must be set to **On** and **Everyone nearby.**
