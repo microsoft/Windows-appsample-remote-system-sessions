@@ -63,8 +63,13 @@ namespace QuizGame.ViewModels
             var questions = await LoadQuestionsAsync();
 
             App.SessionManager.SendDebugMessage($"Starting game.");
-            await App.SessionManager.SendMessageToParticipantsAsync(
-                new HostMessage { Type = HostMessageType.GameStarted, Question = questions[0], PlayerScores = Scorecards });
+            await App.SessionManager.SendMessageToParticipantsAsync(new HostMessage
+            {
+                Type = HostMessageType.GameStarted,
+                Question = questions[0],
+                PlayerScores = Scorecards, 
+                TimeSent = DateTime.Now
+            });
 
             Cleanup();
 
