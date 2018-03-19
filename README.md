@@ -1,7 +1,9 @@
 ﻿<!---
     category: NetworkingAndWebServices DeepLinksAndAppToAppCommunication
 -->
+
 # Remote Systems Session API (Quiz Game UWP Sample)
+
 A pub-style trivia game sample for the Universal Windows Platform (UWP) demonstrating the Remote System Session API (part of the Project Rome platform). 
 
 Project Rome is a platform for creating shared experiences that can enable developers to extend their app across devices connected proximally, or through the cloud. The Remote Session API allows a device to host a session that is discoverable by other devices that are nearby. They can then join this session, and send messages among the host and other participants. 
@@ -14,18 +16,18 @@ When running the sample, you are presented with an option to create a new game a
 
 ## Running the sample
 
-This sample requires Visual Studio 2017 (version 15.4), and **you'll need to have at least two Windows 10 devices on the Windows 10 Fall Creators Update (16299) to test out this app scenario.** 
-Once registered, you can use the following links to retrieve the appropriate installers.
-- Get a copy of [Visual Studio 2017](https://www.visualstudio.com/) (version 15.4)
-- Get the [Windows 10 Fall Creators Update](https://support.microsoft.com/help/4028685/windows-10-get-the-fall-creators-update) (16299)
-- Get the latest [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) (16299)
+This sample requires [Visual Studio 2017 and the latest version of the Windows 10 SDK](http://go.microsoft.com/fwlink/?LinkID=280676). You can use the free Visual Studio Community Edition to build and run Windows Universal Platform (UWP) apps. To get the latest updates to Windows and the development tools, and to help shape their development, join 
+the [Windows Insider Program](https://insider.windows.com).
+
+To run this sample, you'll also need to:
+
+- Have at least two Windows 10 devices running the [Windows 10 Fall Creators Update](https://support.microsoft.com/help/4028685/windows-10-get-the-fall-creators-update) (version 16299).
 
 - Configure the following settings:
     1. Bluetooth must be enabled, this can be enabled by going to **Settings | Bluetooth & other devices** and turning on Bluetooth.
     2. Share across devices must also be enabled, you'll need to access **Change shared experience settings**. The feature  **Share across devices** must be set to **On** and **Everyone nearby.**
     3. Ensure the **RemoteSystem**, **Bluetooth**, and **Internet (Client and Server)** capabilities are added in your project. It should be checked by default, but it's important to check this prior to working on any Remote System Session API project.
 - Deploy the app to a minimum of two Windows 10 devices. On one device you'll need to become a sessions host/quiz game host and on another device join the session and answer the game questions.
-
 
 > Note -  Bluetooth must be enabled and the devices that are messaging with each other must be on the same network. Bluetooth is used for discovery of sessions, and the connection then occurs using a network connection e.g. WiFi or Local Area Network (LAN). Discovery will not work over the LAN if you joined to a public network as it will be blocked by the firewall. This applies to both session and device discovery.
 
