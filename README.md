@@ -2,6 +2,17 @@
     category: NetworkingAndWebServices DeepLinksAndAppToAppCommunication
 -->
 
+---
+topic: sample
+languages:
+- csharp
+products:
+- windows
+- uwp
+statusNotificationTargets:
+- codefirst
+---
+
 # Remote Systems Session API (Quiz Game UWP Sample)
 
 A pub-style trivia game sample for the Universal Windows Platform (UWP) demonstrating the Remote System Session API (part of the Project Rome platform). 
