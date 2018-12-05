@@ -1,8 +1,4 @@
-﻿<!---
-    category: NetworkingAndWebServices DeepLinksAndAppToAppCommunication
--->
-
----
+﻿---
 topic: sample
 languages:
 - csharp
