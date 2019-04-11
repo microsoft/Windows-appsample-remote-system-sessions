@@ -1,4 +1,4 @@
-﻿---
+---
 topic: sample
 languages:
 - csharp
@@ -25,12 +25,20 @@ When running the sample, you are presented with an option to create a new game a
 
 > Note - For more information on the Project Rome platform, including the Remote System Session API, see [Connected apps and devices](https://docs.microsoft.com/windows/uwp/launch-resume/connected-apps-and-devices).
 
-## Running the sample
+## Universal Windows Platform development
 
-This sample requires [Visual Studio 2017 and the latest version of the Windows 10 SDK](http://go.microsoft.com/fwlink/?LinkID=280676). You can use the free Visual Studio Community Edition to build and run Windows Universal Platform (UWP) apps. To get the latest updates to Windows and the development tools, and to help shape their development, join 
+### Prerequisites
+
+- Windows 10. Minimum: Windows 10, version 1809 (10.0; Build 17763), also known as the Windows 10 October 2018 Update.
+- [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Minimum: Windows SDK version 10.0.17763.0 (Windows 10, version 1809).
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/) (or Visual Studio 2017). You can use the free Visual Studio Community Edition to build and run Windows Universal Platform (UWP) apps.
+
+To get the latest updates to Windows and the development tools, and to help shape their development, join 
 the [Windows Insider Program](https://insider.windows.com).
 
-To run this sample, you'll also need to:
+## Running the sample
+
+To run this sample, you'll need to:
 
 - Have at least two Windows 10 devices running the [Windows 10 Fall Creators Update](https://support.microsoft.com/help/4028685/windows-10-get-the-fall-creators-update) (version 16299).
 
@@ -50,8 +58,7 @@ The Remote System Session API provides the following functionality:
 - Participants - the ability to join a session, leave a session, and invite session devices
 - Messaging - broadcast or targeted participant messages
 
-> Note -The Remote System Session API also supports a workflow to invite participants that is currently not covered in this sample. 
-
+> Note -The Remote System Session API also supports a workflow to invite participants, which is currently not covered in this sample. 
 
 In the sample, the **SessionsHelper.cs** contains the core code for working with the Remote System Session API. From here you'll be able to construct calls to create a session for device participants to attach to. Some key API concepts are:
 - **RemoteSystemSession** - A sharing session object with participants. Messages are broadcast to all participants or targeted to a specific participant based upon preference.
