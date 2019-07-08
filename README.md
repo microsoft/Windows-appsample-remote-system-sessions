@@ -66,5 +66,7 @@ In the sample, the **SessionsHelper.cs** contains the core code for working with
 - **RemoteSystemSession** - A sharing session object with participants. Messages are broadcast to all participants or targeted to a specific participant based upon preference.
 - **RemoteSystemSessionWatcher** - A watcher object that is notified about remote sessions that have been added or removed. 
 - **RemoteSystemSessionMessageChannel** - The channel is a logical construct on top of RemoteSystemSession. The channel provides the flexibility to create named channels for dedicated data transfer. Channels can be reliable or unreliable. In both cases the ordering of the messages is not guaranteed. 
-- **RemoteSystemSessionParticipant** - Represents a participant in a session. A session can have one or more participants. 
+- **RemoteSystemSessionParticipant** - Represents a participant in a session. A session can have one or more participants.
+
+
  
