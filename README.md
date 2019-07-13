@@ -6,7 +6,7 @@ products:
 - windows
 - windows-uwp
 statusNotificationTargets:
-- codefirst
+- codefirst@microsoft.com
 ---
 
 <!---
