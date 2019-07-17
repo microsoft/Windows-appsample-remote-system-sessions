@@ -7,7 +7,7 @@ products:
 - windows-uwp
 statusNotificationTargets:
 - codefirst@microsoft.com
-description: "A pub-style trivia game sample for the Universal Windows Platform (UWP) demonstrating the Remote System Session API (part of the Project Rome platform)."
+description: "A pub-style trivia game sample for the Universal Windows Platform (UWP) demonstrating the Remote System Session API."
 ---
 
 <!---
