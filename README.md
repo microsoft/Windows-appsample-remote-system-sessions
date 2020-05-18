@@ -17,7 +17,7 @@ statusNotificationTargets:
 
 A pub-style trivia game sample for the Universal Windows Platform (UWP) demonstrating the Remote System Session API (part of the Project Rome platform).
 
-> Note - This sample is targeted and tested for Windows 10, version 2004 (10.0; Build 19569), and Visual Studio 2019. If you prefer, you can use project properties to retarget the project(s) to Windows 10, version 1903 (10.0; Build 18362).
+> Note - This sample is targeted and tested for Windows 10, version 2004 (10.0; Build 19041), and Visual Studio 2019. If you prefer, you can use project properties to retarget the project(s) to Windows 10, version 1903 (10.0; Build 18362).
 
 Project Rome is a platform for creating shared experiences that can enable developers to extend their app across devices connected proximally, or through the cloud. The Remote Session API allows a device to host a session that is discoverable by other devices that are nearby. They can then join this session, and send messages among the host and other participants. 
 
